@@ -2,7 +2,7 @@ const mapUi = require('../maps/ui')
 // const mapThing = require('..templates/map.handlebars')
 
 const makeMap = function (event) {
-  mapUi.makeMap
+  mapUi.makeMap()
 }
 
 const addHandlers = () => {
