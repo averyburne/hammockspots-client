@@ -15,7 +15,16 @@
       <h1>Brewfind</h1>
       <h4>Best brewery lookup website in CT</h4>
       <button id="map-button">Get Map</button>
-      <div id="map_canvas" style="width: 500px; height: 500px;" class="map-content"></div>
+      <div id="map-canvas" style="width: 500px; height: 500px;" class="map-content">map goes here</div>
+      <form id="add-listItem">
+        <fieldset>
+        <legend>Add your brewery to Brewfind</legend>
+          <input name="brewery[name]" type="text" class="form-control" placeholder="Title" required>
+          <input name="brewery[address]" type="text" class="form-control" placeholder="Address"></input>
+          <input type="submit" class="btn btn-outline-primary" value="Add List Item">
+        </fieldset>
+
+      </form>
 
     </body>
 </html>
