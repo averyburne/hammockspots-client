@@ -16,14 +16,16 @@
       <h4>Best hammock spots in CT</h4>
       <button id="map-button">Get Map</button>
       <div id="map" style="height: 500px;" class="col-12 col-sm-10">map goes here</div>
-      <form id="add-listItem">
+      <div id="map-info"></div>
+
+      <form id="add-hammockSpot">
         <fieldset>
         <legend>Add your favorite hammock spot</legend>
-          <input name="brewery[name]" type="text" class="form-control" placeholder="Title" required>
-          <input name="brewery[address]" type="text" class="form-control" placeholder="Address"></input>
+          <input name="hammock[name]" type="text" class="form-control" placeholder="Name" required>
+          <input name="hammock[lat]" type="text" step="0.0001" class="form-control" placeholder="Latitude"></input>
+          <input name="hammock[lng]" type="text" step="0.0001" class="form-control" placeholder="Longitude"></input>
           <input type="submit" class="btn btn-outline-primary" value="Add List Item">
         </fieldset>
-
       </form>
 
     </body>
