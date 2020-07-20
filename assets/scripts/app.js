@@ -1,5 +1,5 @@
 'use strict'
-const breweryEvents = require('./breweries/events')
+const hammockSpotEvents = require('./hammockSpots/events')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -8,5 +8,5 @@ const breweryEvents = require('./breweries/events')
 // require('./example')
 
 $(() => {
-  breweryEvents.addHandlers()
+  hammockSpotEvents.addHandlers()
 })
