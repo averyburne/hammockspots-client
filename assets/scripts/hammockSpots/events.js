@@ -6,7 +6,7 @@ const ui = require('./ui')
 const onCreate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  ui.create(event)
+  ui.create(data)
 }
 
 const makeMap = function (event) {

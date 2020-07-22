@@ -7,8 +7,10 @@
   var map = new google.maps.Map(
     document.getElementById('map'), {zoom: 8.8, center: {lat: 41.6215, lng: -72.7457}});
   // The marker, positioned at Uluru
+  new google.maps.Marker({position: {lat: 41.647713, lng: -73.097320}, map: map});
+
   let places = document.getElementById('map-info').value
-  places = places.pointers
+  // places = places.pointers
 
   for (let i = 0; i < places.length; i++) {
     new google.maps.Marker({position: places[i], map: map});
