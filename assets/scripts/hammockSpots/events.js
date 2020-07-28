@@ -22,6 +22,7 @@ const makeMap = function (event) {
 
 const addHandlers = () => {
   $('#map-button').on('click', makeMap)
+  $('#get-locations').on('click', onIndex)
   $('#add-hammockSpot').on('submit', onCreate)
 }
 
