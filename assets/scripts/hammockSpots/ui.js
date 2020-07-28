@@ -6,7 +6,7 @@ const create = function (data) {
 
 const onIndexSuccess = function (data) {
   const pointers = []
-  console.log(data.hammock)
+  console.log(data)
   for (let i = 0; i < 1; i++) {
     if (data.hammock.lat !== null && data.hammock.lng !== null) {
       if (data.hammock.lat !== undefined && data.hammock.lng !== undefined) {
@@ -19,6 +19,11 @@ const onIndexSuccess = function (data) {
   console.log($('#map-info').val)
 }
 
+const onIndexFailure = function (data) {
+  console.log("didn't work")
+}
+
 module.exports = {
-  create
+  create,
+  onIndexSuccess
 }

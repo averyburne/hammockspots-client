@@ -12,9 +12,22 @@ const onCreate = function (event) {
 }
 
 const onIndex = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
   api.index()
     .then(ui.onIndexSuccess())
-    .then(mapUi.makeMap())
+    // .then(mapUi.makeMap())
+    .catch(ui.onIndexFailure)
+}
+
+const onUpdate = function (event) {
+  event.preventDefault()
+  api.update()
+}
+
+const onDelete = function (event) {
+  event.preventDefault()
+  api.destroy()
 }
 
 const makeMap = function (event) {
