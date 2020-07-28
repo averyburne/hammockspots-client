@@ -13,6 +13,7 @@ const onCreate = function (event) {
 
 const onIndex = function (event) {
   api.index()
+    .then(ui.onIndexSuccess())
     .then(mapUi.makeMap())
 }
 

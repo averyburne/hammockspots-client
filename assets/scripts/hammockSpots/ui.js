@@ -1,6 +1,10 @@
 'use strict'
 
 const create = function (data) {
+
+}
+
+const onIndexSuccess = function (data) {
   const pointers = []
   console.log(data.hammock)
   for (let i = 0; i < 1; i++) {
