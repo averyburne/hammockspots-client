@@ -16,6 +16,21 @@ const index = () => {
   })
 }
 
+const update = (id) => {
+  return $.ajax({
+    url: config.apiUrl + 'hammockSpots' + id,
+    method: 'DELETE'
+  })
+}
+
+const update = (data, id) => {
+  return $.ajax({
+    url: config.apiUrl + 'hammockSpots' + id,
+    method: 'PATCH',
+    data
+  })
+}
+
 module.exports = {
   create,
   index
