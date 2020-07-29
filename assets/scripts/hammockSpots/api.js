@@ -16,7 +16,7 @@ const index = () => {
   })
 }
 
-const delete = (id) => {
+const destroy = id => {
   return $.ajax({
     url: config.apiUrl + 'hammockSpots' + id,
     method: 'DELETE'
@@ -33,5 +33,7 @@ const update = (data, id) => {
 
 module.exports = {
   create,
-  index
+  index,
+  destroy,
+  update
 }
