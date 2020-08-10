@@ -9,13 +9,13 @@
   // The marker, positioned at Uluru
   new google.maps.Marker({position: {lat: 41.647713, lng: -73.097320}, map: map});
 
-  let places = document.getElementById('map-info')
+  let places = document.getElementById('map-info').value
   places = places.pointers
 
   new google.maps.Marker({position: places, map: map});
 
   for (let i = 0; i < 1; i++) {
-    new google.maps.Marker({position: places, map: map});
+    new google.maps.Marker({position: places[i], map: map});
     }
   }
 

@@ -13,7 +13,7 @@ const onIndexSuccess = function (data) {
         console.log(data.hammockSpot[i])
         pointers.push({ lat: data.hammockSpot[i].lat, lng: data.hammockSpot[i].lng })
       }
-    }
+    }f
   }
   console.log(pointers)
   $('#map-info').val({ pointers: pointers })
