@@ -12,11 +12,10 @@ const onCreate = function (event) {
 }
 
 const onIndex = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
   api.index()
+    // .then(handleAsync())
     .then(ui.onIndexSuccess())
-    // .then(mapUi.makeMap())
+    .then(mapUi.makeMap())
     .catch(ui.onIndexFailure)
 }
 
@@ -32,6 +31,12 @@ const onDelete = function (event) {
 
 const makeMap = function (event) {
   mapUi.makeMap()
+}
+
+const handleAsync = () => {
+  setTimeout(function () {
+    console.log('waiting')
+  }, 5000)
 }
 
 const addHandlers = () => {

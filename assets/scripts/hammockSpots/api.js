@@ -14,6 +14,7 @@ const index = () => {
     url: config.apiUrl + 'hammockSpots',
     method: 'GET'
   })
+  console.log('henlo')
 }
 
 const destroy = id => {
