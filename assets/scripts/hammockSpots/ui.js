@@ -6,11 +6,12 @@ const create = function (data) {
 
 const onIndexSuccess = function (data) {
   const pointers = []
-  console.log(data)
-  for (let i = 0; i < 1; i++) {
-    if (data.hammock.lat !== null && data.hammock.lng !== null) {
-      if (data.hammock.lat !== undefined && data.hammock.lng !== undefined) {
-        pointers.push({ lat: data.hammock.lat, lng: data.hammock.lng })
+  console.log(data.hammockSpot)
+  for (let i = 0; i < data.hammockSpot.length; i++) {
+    if (data.hammockSpot[i].lat !== null && data.hammockSpot[i].lng !== null) {
+      if (data.hammockSpot[i].lat !== undefined && data.hammockSpot[i].lng !== undefined) {
+        console.log(data.hammockSpot[i])
+        pointers.push({ lat: data.hammockSpot[i].lat, lng: data.hammockSpot[i].lng })
       }
     }
   }
