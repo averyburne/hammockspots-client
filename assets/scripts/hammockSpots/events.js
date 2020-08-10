@@ -13,9 +13,9 @@ const onCreate = function (event) {
 
 const onIndex = function (event) {
   api.index()
-    // .then(handleAsync())
-    .then(ui.onIndexSuccess())
-    .then(mapUi.makeMap())
+    .then(handleAsync())
+    .then(ui.onIndexSuccess)
+    .then(mapUi.makeMap)
     .catch(ui.onIndexFailure)
 }
 

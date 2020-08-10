@@ -11,22 +11,21 @@ const create = data => {
 
 const index = () => {
   return $.ajax({
-    url: config.apiUrl + 'hammockSpots',
+    url: config.apiUrl + '/hammockSpots',
     method: 'GET'
   })
-  console.log('henlo')
 }
 
 const destroy = id => {
   return $.ajax({
-    url: config.apiUrl + 'hammockSpots' + id,
+    url: config.apiUrl + '/hammockSpots' + id,
     method: 'DELETE'
   })
 }
 
 const update = (data, id) => {
   return $.ajax({
-    url: config.apiUrl + 'hammockSpots' + id,
+    url: config.apiUrl + '/hammockSpots' + id,
     method: 'PATCH',
     data
   })
