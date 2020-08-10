@@ -12,9 +12,7 @@
   let places = document.getElementById('map-info').value
   places = places.pointers
 
-  new google.maps.Marker({position: places, map: map});
-
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < places.length; i++) {
     new google.maps.Marker({position: places[i], map: map});
     }
   }
