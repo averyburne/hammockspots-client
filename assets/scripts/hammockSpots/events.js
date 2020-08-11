@@ -9,11 +9,11 @@ const onCreate = function (event) {
   const data = getFormFields(event.target)
   api.create(data)
     .then(ui.create(data))
+    .then(onIndex())
 }
 
 const onIndex = function (event) {
   api.index()
-    .then(handleAsync())
     .then(ui.onIndexSuccess)
     .then(mapUi.makeMap)
     .catch(ui.onIndexFailure)
