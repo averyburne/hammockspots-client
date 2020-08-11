@@ -1,0 +1,30 @@
+<div class="row">
+  {{#each hammockSpots as |hammockSpot|}}
+
+  <section class="col-12 col-md-4 col-sm-6 col-lg-3 text-center items" data-id="{{hammockSpot._id}}">
+    <h4>Name:</h4>
+
+    <p>
+      {{#if hammockSpot.name}}
+        {{hammockSpot.name}}
+      {{else}}
+        No name provided.
+      {{/if}}
+    </p>
+      <!-- {{#if listItem.completed}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed"
+         checked>
+      <label for="completed">Complete</label>
+      {{else}}
+      <input type="checkbox" class="completed" data-bool="{{listItem.completed}}" data-id="{{listItem._id}}" name="completed">
+      <label for="completed">Complete</label>
+      {{/if}} -->
+    <p>
+      <h6>Latitude:</h6>
+        {{hammockSpot.lat}}
+      <h6>Longitude</h6>
+        {{hammockSpot.lng}}
+    </p>
+  </section>
+  {{/each}}
+</div>
