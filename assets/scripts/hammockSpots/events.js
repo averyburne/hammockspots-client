@@ -26,7 +26,14 @@ const onUpdate = function (event) {
 
 const onDelete = function (event) {
   event.preventDefault()
-  api.destroy()
+  console.log('hello')
+  const id = $(event.target).data('id')
+  api.destroy(id)
+    .then(function () {
+      onIndex(event)
+    })
+    .then(ui.onDeleteSuccess)
+    .catch(ui.onDeleteFailure)
 }
 
 const makeMap = function (event) {
@@ -43,6 +50,7 @@ const addHandlers = () => {
   $('#map-button').on('click', makeMap)
   $('#get-locations').on('click', onIndex)
   $('#add-hammockSpot').on('submit', onCreate)
+  $('.content').on('click', '.remove-hammockSpot', onDelete)
 }
 
 module.exports = {

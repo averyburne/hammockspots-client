@@ -18,14 +18,14 @@ const index = () => {
 
 const destroy = id => {
   return $.ajax({
-    url: config.apiUrl + '/hammockSpots' + id,
+    url: config.apiUrl + '/hammockSpots/' + id,
     method: 'DELETE'
   })
 }
 
 const update = (data, id) => {
   return $.ajax({
-    url: config.apiUrl + '/hammockSpots' + id,
+    url: config.apiUrl + '/hammockSpots/' + id,
     method: 'PATCH',
     data
   })
