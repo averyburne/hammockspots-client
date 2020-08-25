@@ -12,6 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- Modal -->
       <div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -23,15 +24,16 @@
       </div>
       <div class="modal-body">
         <p id='message2'></p>
-        <form id='update-item' class="col-12">
+        <form id='update-hammockSpot' class="col-12">
           <fieldset>
             <div class="form-group">
-              <label>Title</label>
-              <input type='text' class="form-control" name='listItem[title]' placeholder='Title' required>
-              <label>Description</label>
-              <textarea name="listItem[description]" type="text" class="form-control" placeholder="Description" required></textarea>
+              <label>Name</label>
+              <input type='text' class="form-control" name='hammockSpot[name]' placeholder='Name' required>
+              <label>Latitude</label>
+              <input name="hammockSpot[lat]" type="text" class="form-control" placeholder="Latitude" required></input>
+              <input name="hammockSpot[lng]" type="text" class="form-control" placeholder="Longitude" required></input>
               <br>
-              <input type='submit' class="btn btn-primary" value='Update'>
+              <input type='submit' class="update-btn btn-primary" value='Update'>
             </div>
           </fieldset>
         </form>
@@ -39,6 +41,8 @@
     </div>
   </div>
 </div>
+
+
       <h1>HammockSpots</h1>
       <h4>Best hammock spots in CT</h4>
       <button id="map-button">Get Map</button>

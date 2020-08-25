@@ -28,7 +28,18 @@ const onIndexFailure = function (data) {
   console.log("didn't work")
 }
 
+const onUpdateSuccess = function (data) {
+  console.log('Updated!')
+}
+
+const onUpdateFailure = function (data) {
+  console.log('Failed!')
+}
+
 module.exports = {
   create,
-  onIndexSuccess
+  onIndexSuccess,
+  onIndexFailure,
+  onUpdateSuccess,
+  onUpdateFailure
 }
