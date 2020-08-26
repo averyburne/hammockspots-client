@@ -23,12 +23,13 @@ const onUpdate = function (event) {
   event.preventDefault()
   const id = $(event.target).data('id')
   const data = getFormFields(event.target)
-  api.update(data, id)
-    .then(function () {
-      onIndex(event)
-    })
-    .then(ui.onUpdateSuccess)
-    .catch(ui.onUpdateFailure)
+  console.log(id)
+  // api.update(data, id)
+  //   .then(function () {
+  //     onIndex(event)
+  //   })
+  //   .then(ui.onUpdateSuccess)
+  //   .catch(ui.onUpdateFailure)
 }
 
 const onDelete = function (event) {
@@ -58,7 +59,7 @@ const addHandlers = () => {
   $('#get-locations').on('click', onIndex)
   $('#add-hammockSpot').on('submit', onCreate)
   $('.content').on('click', '.remove-hammockSpot', onDelete)
-  $('.content').on('submit', '.update-btn', onUpdate)
+  $('.content').on('submit', '#update-hammockSpot-form', onUpdate)
 }
 
 module.exports = {
