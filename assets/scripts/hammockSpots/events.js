@@ -2,6 +2,7 @@ const getFormFields = require('../../../lib/get-form-fields')
 const mapUi = require('../maps/ui')
 const ui = require('./ui')
 const api = require('./api')
+const store = require('../store')
 // const mapThing = require('..templates/map.handlebars')
 
 const onCreate = function (event) {
@@ -24,12 +25,12 @@ const onUpdate = function (event) {
   const id = $(event.target).data('id')
   const data = getFormFields(event.target)
   console.log(id)
-  // api.update(data, id)
+  api.update(data, id)
   //   .then(function () {
   //     onIndex(event)
   //   })
-  //   .then(ui.onUpdateSuccess)
-  //   .catch(ui.onUpdateFailure)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onUpdateFailure)
 }
 
 const onDelete = function (event) {
@@ -59,7 +60,8 @@ const addHandlers = () => {
   $('#get-locations').on('click', onIndex)
   $('#add-hammockSpot').on('submit', onCreate)
   $('.content').on('click', '.remove-hammockSpot', onDelete)
-  $('.content').on('submit', '#update-hammockSpot-form', onUpdate)
+  $('.temp-update-button').on('click', onUpdate)
+  // $('.content').on('submit', '#update-hammockSpot-form', onUpdate)
 }
 
 module.exports = {
