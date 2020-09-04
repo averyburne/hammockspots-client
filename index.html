@@ -51,16 +51,19 @@
       <div id="map" style="height: 500px;" class="col-12 col-sm-10">map goes here</div>
       <button id="get-locations">Get Locations</button>
       <div id="map-info"></div>
-
-      <form id="add-hammockSpot">
-        <fieldset>
-        <legend>Add your favorite hammock spot</legend>
-          <input name="hammockSpot[name]" type="text" class="form-control" placeholder="Name" required>
-          <input name="hammockSpot[lat]" type="text" step="0.0001" class="form-control" placeholder="Latitude"></input>
-          <input name="hammockSpot[lng]" type="text" step="0.0001" class="form-control" placeholder="Longitude"></input>
-          <input type="submit" class="btn btn-outline-primary" value="Add List Item">
-        </fieldset>
-      </form>
+      <div class="container">
+        <div class="col-1"></div>
+        <form id="add-hammockSpot" class="col-10">
+          <fieldset>
+          <legend>Add your favorite hammock spot</legend>
+            <input name="hammockSpot[name]" type="text" class="form-control" placeholder="Name" required>
+            <input name="hammockSpot[lat]" type="text" step="0.0001" class="form-control" placeholder="Latitude"></input>
+            <input name="hammockSpot[lng]" type="text" step="0.0001" class="form-control" placeholder="Longitude"></input>
+            <input type="submit" class="btn btn-outline-primary" value="Add List Item">
+          </fieldset>
+        </form>
+        <div class="col-1"></div>
+      </div>
       <div class="content"></div>
       <button class="temp-update-button">Confirm Update</button>
 
