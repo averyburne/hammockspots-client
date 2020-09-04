@@ -14,17 +14,20 @@ const onIndexSuccess = function (data) {
 
   const pointers = []
   const ids = []
+  const nums = []
   for (let i = 0; i < data.hammockSpot.length; i++) {
     if (data.hammockSpot[i].lat !== null && data.hammockSpot[i].lng !== null) {
       if (data.hammockSpot[i].lat !== undefined && data.hammockSpot[i].lng !== undefined) {
         console.log(data.hammockSpot[i])
         pointers.push({ lat: data.hammockSpot[i].lat, lng: data.hammockSpot[i].lng })
         ids.push(data.hammockSpot[i]._id)
+        nums.push(i)
       }
     }
   }
   $('#map-info').val({ pointers: pointers })
   $('#map-info').val({ ids: ids})
+  $('#map-info').val({ nums: nums})
   console.log(ids)
   console.log($('#map-info').val)
 }
